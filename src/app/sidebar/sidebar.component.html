@@ -1,0 +1,51 @@
+<div id="sidebar">
+    <div class="sidebar_top">
+        <div id="sidebar_header">
+            <div class="avatar">
+                <img src="../../assets/images/icons/user.svg" alt="">
+            </div>
+            <div class="actionsContainer">
+                <div class="action-icons">
+                    <img src="../../assets/images/icons/my-status.svg" alt="">
+                </div>
+                <div class="action-icons">
+                    <img src="../../assets/images/icons/new-chat.svg" alt="">
+                </div>
+                <div class="action-icons">
+                    <img src="../../assets/images/icons/setting.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="sidebar_search">
+            <img id="search-icon" src="../assets/images/icons/search.svg" alt="">
+            <input type="text" placeholder="Search or start new chat">
+            <div class="action-icons">
+                <img src="../../assets/images/icons/filter.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="sidebar_content">
+        <!-- <div id="noConversation">
+            All chats are archived
+        </div> -->
+        <div class="chat" *ngFor="let chat of chats">
+            <div class="picture">
+                <img src="{{ '../../assets/images/icons/' + chat.picture }}" alt="">
+            </div>
+            <div class="content">
+                <div class="contentHeader">
+                    <div class="name">{{ chat.name }}</div>
+                    <div class="time">{{ chat.time }}</div>
+                </div>
+                <div class="message">
+                    <img *ngIf="!chat.isMessageRead" src="../../assets/images/icons/double-tick-unread.png" alt="">
+                    <img *ngIf="chat.isMessageRead" src="../../assets/images/icons/double-tick-read.png" alt="">
+                    {{ chat.lastMessage }}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

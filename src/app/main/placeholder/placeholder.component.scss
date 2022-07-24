@@ -1,0 +1,90 @@
+.placeholderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+
+    img {
+        width: 360px;
+        height: 200px;
+    }
+
+    .placeholder-details{
+        text-align: center;
+        color: #667681;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 15px;
+            height: 15px;
+        }
+
+        p {
+            font-weight: 100;
+            font-size: 14px;
+            
+            a {
+                color: #027eb5;
+                text-decoration: none;
+            }
+        }
+
+        .whatsapp-web-new {
+            border-bottom: 1px solid grey;
+            padding-bottom: 10px;
+
+            .whatsapp-web-new-title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width:50px;
+                    height: 27px;
+                    padding-left: 10px;
+                }
+
+                h1 {
+                    font-weight: 100;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .whatsapp-web-footer {
+            display: flex;
+            flex-direction: column;
+
+            .desktop-for-mac {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 10px;
+                
+                img {
+                    padding-right: 10px;
+                }
+            }
+
+            .encryption {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 120px;
+
+                img {
+                    padding-right: 10px;
+                }
+
+                p {
+                    margin: 0px;
+                }
+                
+            }
+        }
+    }
+}

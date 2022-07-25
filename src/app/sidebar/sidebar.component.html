@@ -29,7 +29,7 @@
         <!-- <div id="noConversation">
             All chats are archived
         </div> -->
-        <div class="chat" *ngFor="let conversation of conversations">
+        <div class="chat" *ngFor="let conversation of conversations" (click)="onClick(conversation)">
             <div class="picture">
                 <img src="{{ '../../assets/images/icons/' + conversation.picture }}" alt="">
             </div>
@@ -39,8 +39,10 @@
                     <div class="time">{{ conversation.messages[conversation.messages.length - 1].time }}</div>
                 </div>
                 <div class="message">
-                    <img *ngIf="!conversation.messages[conversation.messages.length - 1].isMessageRead" src="../../assets/images/icons/double-tick-unread.png" alt="">
-                    <img *ngIf="conversation.messages[conversation.messages.length - 1].isMessageRead" src="../../assets/images/icons/double-tick-read.png" alt="">
+                    <img *ngIf="!conversation.messages[conversation.messages.length - 1].isMessageRead"
+                        src="../../assets/images/icons/double-tick-unread.png" alt="">
+                    <img *ngIf="conversation.messages[conversation.messages.length - 1].isMessageRead"
+                        src="../../assets/images/icons/double-tick-read.png" alt="">
                     {{ conversation.messages[conversation.messages.length - 1].content }}
                 </div>
             </div>

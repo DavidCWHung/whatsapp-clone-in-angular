@@ -2,10 +2,10 @@
 <div id="background_body"></div>
 
 <div id="chat">
-  <app-sidebar></app-sidebar>
+  <app-sidebar (conversationSelected)="onConversationSelected($event)"></app-sidebar>
   <div id="main">
-    <app-placeholder *ngIf="false"></app-placeholder>
-    <app-conversation></app-conversation>
+    <app-placeholder *ngIf="!conversation"></app-placeholder>
+    <app-conversation *ngIf="conversation" [conversationSelected]="conversation"></app-conversation>
   </div>
 </div>
 

@@ -6,18 +6,18 @@ import { Message } from "./message.model";
 export class ConversationService {
     private conversations: Conversation[] = [
         new Conversation(
-            'Ada',
+            'Ben',
             [
-                new Message('Hello', 'Ada', '8:42 a.m.', true),
-                new Message('How are you?', 'Ada', '8:43 a.m.', false)
+                new Message('Hello', 'Ben', '8:42 a.m.', true),
+                new Message('How are you?', 'Ben', '8:43 a.m.', false)
             ],
             'user.svg'
         ),
         new Conversation(
-            'Billy',
+            'Kaden',
             [
-                new Message('Hey', 'Billy', 'yesterday', true),
-                new Message('Hang out tonight?', 'Billy', 'yesterday', true)
+                new Message('Hey', 'Kaden', 'yesterday', true),
+                new Message('Hang out tonight?', 'Kaden', 'yesterday', true)
             ],
             'user.svg'
         )

@@ -4,10 +4,9 @@
 <div id="chat">
   <app-sidebar></app-sidebar>
   <div id="main">
-    <app-placeholder></app-placeholder>
+    <app-placeholder *ngIf="false"></app-placeholder>
+    <app-conversation></app-conversation>
   </div>
-  
-
 </div>
 
 <router-outlet></router-outlet>

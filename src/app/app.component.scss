@@ -28,11 +28,12 @@
     app-sidebar {
         flex-basis: 30%;
         display: block;
+        border-right: 1px solid #e9edef;
     }
 
     #main {
-        flex-grow: 1;
         background-color: #f8f8f8;
+        flex-grow: 1;
     }
 
 }

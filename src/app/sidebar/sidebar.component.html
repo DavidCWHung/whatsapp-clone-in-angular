@@ -39,10 +39,12 @@
                     <div class="time">{{ conversation.messages[conversation.messages.length - 1].time }}</div>
                 </div>
                 <div class="message">
-                    <img *ngIf="!conversation.messages[conversation.messages.length - 1].isMessageRead"
+                    <div *ngIf="conversation.messages[conversation.messages.length - 1].sentByMe">
+                        <img *ngIf="!conversation.messages[conversation.messages.length - 1].isMessageRead"
                         src="../../assets/images/icons/double-tick-unread.png" alt="">
-                    <img *ngIf="conversation.messages[conversation.messages.length - 1].isMessageRead"
+                        <img *ngIf="conversation.messages[conversation.messages.length - 1].isMessageRead"
                         src="../../assets/images/icons/double-tick-read.png" alt="">
+                    </div>
                     {{ conversation.messages[conversation.messages.length - 1].content }}
                 </div>
             </div>

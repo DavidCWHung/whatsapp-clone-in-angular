@@ -8,16 +8,19 @@ export class ConversationService {
         new Conversation(
             'Ben',
             [
-                new Message('Hello', 'Ben', '8:42 a.m.', true),
-                new Message('How are you?', 'Ben', '8:43 a.m.', false)
+                new Message('Hello', '8:42 a.m.', false, true),
+                new Message('How are you?', '8:43 a.m.', false, true),
+                new Message('I am good, thanks', '8:50 a.m.', true, false),
+                new Message('See you later then!', '9:00 a.m.', false, true)
             ],
             'user.svg'
         ),
         new Conversation(
             'Kaden',
             [
-                new Message('Hey', 'Kaden', 'yesterday', true),
-                new Message('Hang out tonight?', 'Kaden', 'yesterday', true)
+                new Message('Hey', 'yesterday', false, true),
+                new Message('Hang out tonight?', 'yesterday', false, true),
+                new Message('Sure!', 'yesterday', true, true)
             ],
             'user.svg'
         )

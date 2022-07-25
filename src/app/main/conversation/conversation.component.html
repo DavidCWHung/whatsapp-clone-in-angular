@@ -9,10 +9,27 @@
             <img src="../../../assets/images/icons/setting.svg" alt="">
         </div>
     </div>
-    <div class="conversation-main"></div>
+    <div class="conversation-main">
+        <div 
+            class="message-box" 
+            [ngClass]="{me: message.sentByMe}"
+            *ngFor="let message of conversation.messages">
+                <div class="message-box-content">
+                    {{ message.content }}
+                </div>
+                <div class="message-box-time-and-status">
+                    {{ message.time }}
+                    <div class="message-box-status" *ngIf="message.sentByMe">
+                        <img *ngIf="message.isMessageRead" src="../../../assets/images/icons/double-tick-read.png" alt="">
+                        <img *ngIf="!message.isMessageRead" src="../../../assets/images/icons/double-tick-unread.png" alt="">
+                    </div>
+                </div>
+                
+        </div>
+    </div>
     <div class="conversation-input">
         <img src="../../../assets/images/icons/smile-emoji.svg" alt="">
-        <img src="../../../assets/images/icons/paper-clip.svg" alt="">
+        <img id="paper-clip" src="../../../assets/images/icons/paper-clip.svg" alt="">
         <input id="message-input" type="text" placeholder="Type a message">
         <img id="mic" src="../../../assets/images/icons/mic.svg" alt="">
     </div>

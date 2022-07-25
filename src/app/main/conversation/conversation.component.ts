@@ -7,7 +7,7 @@ import { Conversation } from 'src/app/shared/conversation.model';
   styleUrls: ['./conversation.component.scss']
 })
 export class ConversationComponent implements OnInit {
-  @Input('conversationSelected') conversation: Conversation = null;
+  @Input('conversationSelected') conversation: Conversation;
 
   ngOnInit(): void {}
 

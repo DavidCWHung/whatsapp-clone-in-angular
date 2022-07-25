@@ -29,19 +29,19 @@
         <!-- <div id="noConversation">
             All chats are archived
         </div> -->
-        <div class="chat" *ngFor="let chat of chats">
+        <div class="chat" *ngFor="let conversation of conversations">
             <div class="picture">
-                <img src="{{ '../../assets/images/icons/' + chat.picture }}" alt="">
+                <img src="{{ '../../assets/images/icons/' + conversation.picture }}" alt="">
             </div>
             <div class="content">
                 <div class="contentHeader">
-                    <div class="name">{{ chat.name }}</div>
-                    <div class="time">{{ chat.time }}</div>
+                    <div class="name">{{ conversation.contactName }}</div>
+                    <div class="time">{{ conversation.messages[conversation.messages.length - 1].time }}</div>
                 </div>
                 <div class="message">
-                    <img *ngIf="!chat.isMessageRead" src="../../assets/images/icons/double-tick-unread.png" alt="">
-                    <img *ngIf="chat.isMessageRead" src="../../assets/images/icons/double-tick-read.png" alt="">
-                    {{ chat.lastMessage }}
+                    <img *ngIf="!conversation.messages[conversation.messages.length - 1].isMessageRead" src="../../assets/images/icons/double-tick-unread.png" alt="">
+                    <img *ngIf="conversation.messages[conversation.messages.length - 1].isMessageRead" src="../../assets/images/icons/double-tick-read.png" alt="">
+                    {{ conversation.messages[conversation.messages.length - 1].content }}
                 </div>
             </div>
         </div>

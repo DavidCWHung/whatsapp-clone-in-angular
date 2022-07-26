@@ -8,13 +8,17 @@ import { ConversationService } from '../shared/conversation.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  conversations: Conversation[] = [];
+  conversations: Conversation[];
   @Output() conversationSelected = new EventEmitter<Conversation>();
 
   constructor(private conversationService: ConversationService) { }
 
   ngOnInit(): void {
-    this.conversations = this.conversationService.getConversations();
+    this.conversationService.conversationChanged.subscribe(
+      (conversations : Conversation[]) => {
+        this.conversations = conversations;
+      }
+    );
   }
 
   onClick(conversation: Conversation) {

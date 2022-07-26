@@ -30,14 +30,15 @@
     }
 
     .conversation-main {
-        flex-grow: 1;
+        flex: 1;
         background-color: #efeae2;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        // justify-content: flex-end;
         padding-left: 75px;
         padding-right: 75px;
         padding-bottom: 20px;
+        overflow-y: auto;
 
         .message-box {
             background-color: #ffffff;
@@ -48,7 +49,6 @@
             color: #111c21;
             align-self: flex-start;
             display: flex;
-
 
             &.me {
                 background-color: #d9fdd3;
@@ -78,6 +78,11 @@
                     }
                 }
             }
+        }
+
+        // Alternative solution to push the message to the bottom (justify-content cannot be used with scroll which will resuit in overflow and thus data loss)
+        .message-box:first-child {
+            margin-top: auto;
         }
     }
 
@@ -112,5 +117,12 @@
             }
         }
 
+        #send {
+            background: url(../../../assets/images/icons/send.svg);
+            width: 20px;
+            height: 20px;
+            border: none;
+            cursor: pointer;
+        }
     }
 }

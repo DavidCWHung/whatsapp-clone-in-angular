@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   constructor(private dataStorageService: DataStorageService) {}
 
   ngOnInit() {
+    // // To reset the app by overwriting all the data with sample data
     // this.dataStorageService.storeConversations();
     this.dataStorageService.fetchConversations();
   }

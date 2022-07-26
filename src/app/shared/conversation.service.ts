@@ -8,6 +8,7 @@ export class ConversationService {
     private conversations: Conversation[] = [];
     conversationChanged = new Subject<Conversation[]>();
 
+    // // Sample data for reset
     // private conversations: Conversation[] = [
     //     new Conversation(
     //         'Ben',
@@ -36,6 +37,11 @@ export class ConversationService {
 
     setConversations(conversations: Conversation[]) {
         this.conversations = conversations;
+        this.conversationChanged.next(this.conversations.slice());
+    }
+
+    addMessage(conversation: Conversation, message: Message) {
+        conversation.messages.push(message);
         this.conversationChanged.next(this.conversations.slice());
     }
 }

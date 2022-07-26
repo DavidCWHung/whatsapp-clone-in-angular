@@ -30,7 +30,12 @@
     <div class="conversation-input">
         <img src="../../../assets/images/icons/smile-emoji.svg" alt="">
         <img id="paper-clip" src="../../../assets/images/icons/paper-clip.svg" alt="">
-        <input id="message-input" type="text" placeholder="Type a message">
-        <img id="mic" src="../../../assets/images/icons/mic.svg" alt="">
+        <input 
+            id="message" 
+            type="text" 
+            placeholder="Type a message"
+            [(ngModel)]="messageInput">
+        <img *ngIf="!messageInput" src="../../../assets/images/icons/mic.svg" alt="">
+        <img *ngIf="messageInput" style="cursor: pointer;" src="../../../assets/images/icons/send.svg" alt="">
     </div>
 </div>

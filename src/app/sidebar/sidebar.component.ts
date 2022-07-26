@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Conversation } from '../shared/conversation.model';
 import { ConversationService } from '../shared/conversation.service';
 
@@ -7,14 +8,16 @@ import { ConversationService } from '../shared/conversation.service';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, OnDestroy {
   conversations: Conversation[];
   @Output() conversationSelected = new EventEmitter<Conversation>();
+
+  conversationChangedSub: Subscription;
 
   constructor(private conversationService: ConversationService) { }
 
   ngOnInit(): void {
-    this.conversationService.conversationChanged.subscribe(
+    this.conversationChangedSub = this.conversationService.conversationChanged.subscribe(
       (conversations : Conversation[]) => {
         this.conversations = conversations;
       }
@@ -23,5 +26,9 @@ export class SidebarComponent implements OnInit {
 
   onClick(conversation: Conversation) {
     this.conversationSelected.emit(conversation);
+  }
+
+  ngOnDestroy(): void {
+    this.conversationChangedSub.unsubscribe();
   }
 }

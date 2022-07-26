@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Conversation } from 'src/app/shared/conversation.model';
 
 @Component({
@@ -8,7 +8,11 @@ import { Conversation } from 'src/app/shared/conversation.model';
 })
 export class ConversationComponent implements OnInit {
   @Input('conversationSelected') conversation: Conversation;
+  messageInput;
+  
+  
+  ngOnInit(): void { }
 
-  ngOnInit(): void {}
+
 
 }

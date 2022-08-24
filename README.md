@@ -30,6 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 This cloned app has been deployed and hosted on Firebase at https://ng-whatsapp-clone-6b6e1.firebaseapp.com/. 
 
-WIP: Better view or UX on desktop. To cater with mobile environment. 
+WIP: Better view or UX on desktop browser. To cater with mobile environment. 
 
 ![whatsapp-clone-wip](https://user-images.githubusercontent.com/76052863/186438609-9d09a468-9a74-4217-b838-7795137d1015.png)

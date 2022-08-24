@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Deployment
+
+This cloned app has been deployed and hosted on Firebase at https://ng-whatsapp-clone-6b6e1.firebaseapp.com/.
+
+![whatsapp-clone-wip](https://user-images.githubusercontent.com/76052863/186438609-9d09a468-9a74-4217-b838-7795137d1015.png)

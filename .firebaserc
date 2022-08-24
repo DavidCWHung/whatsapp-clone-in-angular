@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ng-whatsapp-clone-6b6e1": {
+      "hosting": {
+        "whatsapp-clone": [
+          "ng-whatsapp-clone-6b6e1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ng-whatsapp-clone-6b6e1"
+  }
+}

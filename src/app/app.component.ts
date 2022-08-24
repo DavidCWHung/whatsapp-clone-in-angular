@@ -9,7 +9,7 @@ import { DataStorageService } from './shared/data-storage.service';
 })
 export class AppComponent implements OnInit {
   title = 'whatsapp-clone';
-  
+
   conversation: Conversation = null;
 
   constructor(private dataStorageService: DataStorageService) {}
